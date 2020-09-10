@@ -25,7 +25,7 @@ const sketch = (sketchArgs) => {
   console.log(points);
 
   return ({ context, width, height }) => {
-    context.fillStyle = "#505050";
+    context.fillStyle = "#544813";
     context.fillRect(0, 0, width, height);
 
     points.forEach(([u, v]) => {
@@ -36,16 +36,19 @@ const sketch = (sketchArgs) => {
       context.beginPath();
       context.arc(x, y, width / 5, 0, 2 * Math.PI, false);
       context.strokeStyle = "red";
+      context.lineWidth = 30;
       context.stroke();
 
       context.beginPath();
       context.arc(x * 1.5, y, width / 5, 0, 2 * Math.PI, false);
       context.strokeStyle = "crimson";
+      context.lineWidth = 30;
       context.stroke();
 
       context.beginPath();
       context.arc(x * 0.5, y, width / 5, 0, 2 * Math.PI, false);
       context.strokeStyle = "orange";
+      context.lineWidth = 30;
       context.stroke();
     });
   };
