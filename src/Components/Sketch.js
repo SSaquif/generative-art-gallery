@@ -7,13 +7,13 @@ const settings = {
 };
 
 const Sketch = ({ sketch }) => {
-  const ref = createRef();
-  // const ref = useRef();
+  // const ref = createRef();
+  const ref = useRef();
 
   useEffect(() => {
     settings.canvas = ref.current;
     canvasSketch(sketch, settings);
-  }, [ref]);
+  }, [ref, sketch]);
 
   return (
     <>
