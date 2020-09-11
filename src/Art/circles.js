@@ -14,7 +14,6 @@ const createGrid = () => {
 
 const circlesSketch = () => {
   const points = createGrid();
-  // console.log(points);
 
   return ({ context, width, height }) => {
     context.fillStyle = "black";

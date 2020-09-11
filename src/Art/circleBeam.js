@@ -12,7 +12,6 @@ const createGrid = () => {
 
 const circleBeamSketch = (sketchArgs) => {
   const points = createGrid();
-  // console.log(points);
 
   return ({ context, width, height }) => {
     context.fillStyle = "#544813";
