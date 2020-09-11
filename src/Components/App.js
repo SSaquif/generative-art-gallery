@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Sketch from "./Sketch";
 import styled from "styled-components";
 import artDirectory from "../Art-Directory/artDirectory";
@@ -6,6 +6,9 @@ import artDirectory from "../Art-Directory/artDirectory";
 const App = () => {
   const [sketch, setSketch] = useState(artDirectory[0]);
   const [sketchIndex, setSketchIndex] = useState(0);
+
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
 
   const lt = "<";
   const gt = ">";
@@ -26,8 +29,10 @@ const App = () => {
 
   const handleKeyDown = (ev) => {
     if (ev.key === "ArrowLeft") {
+      prevRef.current.focus();
       handlePrev();
     } else if (ev.key === "ArrowRight") {
+      nextRef.current.focus();
       handleNext();
     }
   };
@@ -42,9 +47,13 @@ const App = () => {
   return (
     <>
       <SketchContainer>
-        <PrevButton onClick={handlePrev}> {lt} </PrevButton>
+        <PrevButton ref={prevRef} onClick={handlePrev}>
+          {lt}
+        </PrevButton>
         <Sketch sketch={sketch} />
-        <NextButton onClick={handleNext}> {gt} </NextButton>
+        <NextButton ref={nextRef} onClick={handleNext}>
+          {gt}
+        </NextButton>
       </SketchContainer>
     </>
   );
@@ -70,6 +79,11 @@ const PrevButton = styled.button`
   &:hover {
     opacity: 1;
   }
+
+  &:focus {
+    outline: none;
+    opacity: 1;
+  }
 `;
 
 const NextButton = styled.button`
@@ -83,6 +97,11 @@ const NextButton = styled.button`
   margin-left: 2%;
 
   &:hover {
+    opacity: 1;
+  }
+
+  &:focus {
+    outline: none;
     opacity: 1;
   }
 `;
