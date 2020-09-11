@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Sketch from "./Sketch";
 import styled from "styled-components";
 import artDirectory from "../Art-Directory/artDirectory";
@@ -10,19 +10,34 @@ const App = () => {
   const lt = "<";
   const gt = ">";
 
-  const handlePrev = (ev) => {
+  const handlePrev = () => {
     if (sketchIndex) {
       setSketch(artDirectory[sketchIndex - 1]);
       setSketchIndex(sketchIndex - 1);
     }
   };
 
-  const handleNext = (ev) => {
+  const handleNext = () => {
     if (sketchIndex < artDirectory.length - 1) {
       setSketch(artDirectory[sketchIndex + 1]);
       setSketchIndex(sketchIndex + 1);
     }
   };
+
+  const handleKeyDown = (ev) => {
+    if (ev.key === "ArrowLeft") {
+      handlePrev();
+    } else if (ev.key === "ArrowRight") {
+      handleNext();
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [sketchIndex]);
 
   return (
     <>
