@@ -19,7 +19,6 @@ const nightskySketch = () => {
   const filteredPoints = createGrid().filter(([u, v]) => {
     return Math.random() > 0.98;
   });
-  console.log(filteredPoints);
 
   return ({ context, width, height }) => {
     context.fillStyle = "#170b36";
