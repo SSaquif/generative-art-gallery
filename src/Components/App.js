@@ -47,13 +47,21 @@ const App = () => {
   return (
     <>
       <SketchContainer>
-        <PrevButton ref={prevRef} onClick={handlePrev}>
+        <PrevButtonWideScreen ref={prevRef} onClick={handlePrev}>
           {lt}
-        </PrevButton>
+        </PrevButtonWideScreen>
         <Sketch sketch={sketch} />
-        <NextButton ref={nextRef} onClick={handleNext}>
+        <MobileButtonWrapper>
+          <PrevButtonMobile ref={prevRef} onClick={handlePrev}>
+            {lt}
+          </PrevButtonMobile>
+          <NextButtonMobile ref={nextRef} onClick={handleNext}>
+            {gt}
+          </NextButtonMobile>
+        </MobileButtonWrapper>
+        <NextButtonWideScreen ref={nextRef} onClick={handleNext}>
           {gt}
-        </NextButton>
+        </NextButtonWideScreen>
       </SketchContainer>
     </>
   );
@@ -64,9 +72,13 @@ const SketchContainer = styled.div`
   align-items: center;
   justify-content: center;
   height: 100%;
+
+  @media screen and (max-width: 812px) {
+    flex-direction: column;
+  }
 `;
 
-const PrevButton = styled.button`
+const PrevButtonWideScreen = styled.button`
   display: inline-block;
   border: none;
   background-color: black;
@@ -84,9 +96,13 @@ const PrevButton = styled.button`
     outline: none;
     opacity: 1;
   }
+
+  @media screen and (max-width: 812px) {
+    display: none;
+  }
 `;
 
-const NextButton = styled.button`
+const NextButtonWideScreen = styled.button`
   display: inline-block;
   border: none;
   background-color: black;
@@ -104,5 +120,62 @@ const NextButton = styled.button`
     outline: none;
     opacity: 1;
   }
+
+  @media screen and (max-width: 812px) {
+    display: none;
+  }
 `;
+
+const MobileButtonWrapper = styled.div`
+  display: flex;
+`;
+
+const PrevButtonMobile = styled.button`
+  display: inline-block;
+  border: none;
+  background-color: black;
+  color: white;
+  font-size: 4em;
+  opacity: 0.3;
+  padding: 1.5%;
+  margin-right: 10%;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:focus {
+    outline: none;
+    opacity: 1;
+  }
+
+  @media screen and (min-width: 813px) {
+    display: none;
+  }
+`;
+
+const NextButtonMobile = styled.button`
+  display: inline-block;
+  border: none;
+  background-color: black;
+  color: white;
+  font-size: 4em;
+  opacity: 0.3;
+  padding: 1.5%;
+  margin-left: 10%;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:focus {
+    outline: none;
+    opacity: 1;
+  }
+
+  @media screen and (min-width: 813px) {
+    display: none;
+  }
+`;
+
 export default App;
