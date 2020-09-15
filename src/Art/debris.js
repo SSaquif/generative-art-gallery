@@ -27,8 +27,6 @@ const debrisSketch = () => {
     context.fillRect(0, 0, width, height);
 
     filteredPoints.forEach(({ position: [u, v], radius }) => {
-      //creating the circles
-      console.log(u, v);
       const x = lerp(margin, width - margin, u);
       const y = lerp(margin, height - margin, v);
 
