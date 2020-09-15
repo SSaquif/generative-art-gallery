@@ -132,6 +132,9 @@ const NextButtonWideScreen = styled.button`
 
 const MobileButtonWrapper = styled.div`
   display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
 `;
 
 const PrevButtonMobile = styled.button`
@@ -142,7 +145,6 @@ const PrevButtonMobile = styled.button`
   font-size: 4em;
   opacity: 0.3;
   padding: 1.5%;
-  margin-right: 10%;
 
   &:hover {
     opacity: 1;
@@ -166,7 +168,6 @@ const NextButtonMobile = styled.button`
   font-size: 4em;
   opacity: 0.3;
   padding: 1.5%;
-  margin-left: 10%;
 
   &:hover {
     opacity: 1;
