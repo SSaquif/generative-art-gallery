@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/generative-art-react/static/js/main.613e5555.chunk.js",
-    "main.js.map": "/generative-art-react/static/js/main.613e5555.chunk.js.map",
+    "main.js": "/generative-art-react/static/js/main.b6ad5285.chunk.js",
+    "main.js.map": "/generative-art-react/static/js/main.b6ad5285.chunk.js.map",
     "runtime-main.js": "/generative-art-react/static/js/runtime-main.f51aa617.js",
     "runtime-main.js.map": "/generative-art-react/static/js/runtime-main.f51aa617.js.map",
     "static/js/2.527382d1.chunk.js": "/generative-art-react/static/js/2.527382d1.chunk.js",
     "static/js/2.527382d1.chunk.js.map": "/generative-art-react/static/js/2.527382d1.chunk.js.map",
     "index.html": "/generative-art-react/index.html",
-    "precache-manifest.7700a460675c93a4b860df29851bc879.js": "/generative-art-react/precache-manifest.7700a460675c93a4b860df29851bc879.js",
+    "precache-manifest.2d1318b71513c1e8931fd0060789bd62.js": "/generative-art-react/precache-manifest.2d1318b71513c1e8931fd0060789bd62.js",
     "service-worker.js": "/generative-art-react/service-worker.js",
     "static/js/2.527382d1.chunk.js.LICENSE.txt": "/generative-art-react/static/js/2.527382d1.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.f51aa617.js",
     "static/js/2.527382d1.chunk.js",
-    "static/js/main.613e5555.chunk.js"
+    "static/js/main.b6ad5285.chunk.js"
   ]
 }
