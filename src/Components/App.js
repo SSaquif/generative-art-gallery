@@ -9,6 +9,8 @@ const App = () => {
 
   const prevRef = useRef(null);
   const nextRef = useRef(null);
+  const prevRefMobile = useRef(null);
+  const nextRefMobile = useRef(null);
 
   const lt = "<";
   const gt = ">";
@@ -30,9 +32,11 @@ const App = () => {
   const handleKeyDown = (ev) => {
     if (ev.key === "ArrowLeft") {
       prevRef.current.focus();
+      prevRefMobile.current.focus();
       handlePrev();
     } else if (ev.key === "ArrowRight") {
       nextRef.current.focus();
+      nextRefMobile.current.focus();
       handleNext();
     }
   };
@@ -52,10 +56,10 @@ const App = () => {
         </PrevButtonWideScreen>
         <Sketch sketch={sketch} />
         <MobileButtonWrapper>
-          <PrevButtonMobile ref={prevRef} onClick={handlePrev}>
+          <PrevButtonMobile ref={prevRefMobile} onClick={handlePrev}>
             {lt}
           </PrevButtonMobile>
-          <NextButtonMobile ref={nextRef} onClick={handleNext}>
+          <NextButtonMobile ref={nextRefMobile} onClick={handleNext}>
             {gt}
           </NextButtonMobile>
         </MobileButtonWrapper>
