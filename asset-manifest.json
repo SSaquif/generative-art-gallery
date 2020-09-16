@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/generative-art-gallery/static/js/main.136cead8.chunk.js",
-    "main.js.map": "/generative-art-gallery/static/js/main.136cead8.chunk.js.map",
+    "main.js": "/generative-art-gallery/static/js/main.9052d2ad.chunk.js",
+    "main.js.map": "/generative-art-gallery/static/js/main.9052d2ad.chunk.js.map",
     "runtime-main.js": "/generative-art-gallery/static/js/runtime-main.78007c10.js",
     "runtime-main.js.map": "/generative-art-gallery/static/js/runtime-main.78007c10.js.map",
     "static/js/2.e8d630eb.chunk.js": "/generative-art-gallery/static/js/2.e8d630eb.chunk.js",
     "static/js/2.e8d630eb.chunk.js.map": "/generative-art-gallery/static/js/2.e8d630eb.chunk.js.map",
     "index.html": "/generative-art-gallery/index.html",
-    "precache-manifest.d60f2ebdd565ba9a6a56cb3761c2568e.js": "/generative-art-gallery/precache-manifest.d60f2ebdd565ba9a6a56cb3761c2568e.js",
+    "precache-manifest.4a4b9aa28c6d5267861cbe75487f5ed5.js": "/generative-art-gallery/precache-manifest.4a4b9aa28c6d5267861cbe75487f5ed5.js",
     "service-worker.js": "/generative-art-gallery/service-worker.js",
     "static/js/2.e8d630eb.chunk.js.LICENSE.txt": "/generative-art-gallery/static/js/2.e8d630eb.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.78007c10.js",
     "static/js/2.e8d630eb.chunk.js",
-    "static/js/main.136cead8.chunk.js"
+    "static/js/main.9052d2ad.chunk.js"
   ]
 }
