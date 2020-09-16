@@ -3,7 +3,6 @@ import circlesSketch from "../Art/circles";
 import nightskySketch from "../Art/nightsky";
 import debrisSketch from "../Art/debris";
 import whitePinkSketch from "../Art/whitePink";
-import mortDAfnan from "../Art/mortDAfnan";
 import mortDAfnanSketch from "../Art/mortDAfnan";
 
 const artDirectory = [

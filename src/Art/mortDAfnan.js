@@ -40,12 +40,10 @@ const mortDAfnanSketch = () => {
 
     innerPoints.forEach(({ position: [u, v], radius }) => {
       //creating the circles
-      console.log(u, v);
       const x = lerp(margin, width - margin, u);
       const y = lerp(margin, height - margin, v);
 
       context.beginPath();
-      console.log(`x:${x}, y:${y}, radius:${radius}`);
       context.arc(x, y, radius * width, 0, 2 * Math.PI, false);
       context.fillStyle = "#6e1212";
       context.lineWidth = 20;
@@ -54,7 +52,6 @@ const mortDAfnanSketch = () => {
 
     outterPoints.forEach(({ position: [u, v], radius }) => {
       //creating the circles
-      console.log(u, v);
       const x = lerp(0, width, u);
       const y = lerp(0, height, v);
 
