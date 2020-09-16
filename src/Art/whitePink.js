@@ -34,7 +34,6 @@ const whitePinkSketch = () => {
       const y = lerp(margin, height - margin, v);
 
       context.beginPath();
-      console.log(`x:${x}, y:${y}, radius:${radius}`);
       context.arc(x, y, radius * width, 0, 2 * Math.PI, false);
       context.fillStyle = "white";
       context.lineWidth = 20;

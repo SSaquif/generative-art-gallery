@@ -59,7 +59,6 @@ const mortDAfnanSketch = () => {
       const y = lerp(0, height, v);
 
       context.beginPath();
-      console.log(`x:${x}, y:${y}, radius:${radius}`);
       context.arc(x, y, radius * width, 0, 2 * Math.PI, false);
       context.strokeStyle = "#8a1515";
       context.lineWidth = 2;
